@@ -1,0 +1,773 @@
+@import url('https://fonts.googleapis.com/css?family=Nunito+Sans:300,400,600,700,800&display=swap');
+body{
+    font-family: 'Nunito Sans', sans-serif;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+}
+button:active,
+button:focus,
+input:active,
+input:focus{
+    outline: none;
+}
+.top{
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    justify-content: flex-start;
+    background: url('Images/back.jpg');
+    background-size: cover;
+    background-position: center;
+}
+.top .navbar{
+    display: flex;
+    justify-content: space-between;
+    padding: 50px 140px;
+}
+.top .navbar .links a{
+    font-size: 15px;
+    font-weight: 800;
+    text-decoration: none;
+    color: black;
+    padding-left: 30px;
+    letter-spacing: 0.1em;
+}
+.top .navbar .links a:hover{
+    color: #10c9c3;
+    font-size: 16px;
+    transition: 800ms;
+}
+.top .info{
+    padding: 0 100px;
+    display: flex;
+    justify-content: flex-end;
+    height: 100%;
+}
+.top .info .align{
+    width: 39%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+}
+.top .info h1{
+    margin: 0;
+    padding: 0;
+    font-size: 53px;
+    letter-spacing: 0.01em;
+}
+.top .info p{
+    padding: 30px 0 40px 0;
+    word-break: break-word;
+    font-size: 25px;
+    font-weight: 400;
+    line-height: 40px;
+    margin: 0;
+    letter-spacing: 0.005em;
+    color: #818181;
+}
+.top .info button{
+    height: 75px;
+    width: 250px;
+    background: #10c9c3;
+    border: none;
+    color: white;
+    text-transform: uppercase;
+    font-weight: 400;
+    font-size: 17px;
+    letter-spacing: 0.1em;
+}
+
+
+.about{
+    display: flex;
+    justify-content: center;
+}
+.about .container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 870px;
+    padding: 140px 100px;
+}
+.about h1{
+    font-size: 42px;
+    margin: 0;
+    padding: 0;
+    font-weight: 800;
+}
+.about p{
+    text-align: center;
+    font-size: 23px;
+    letter-spacing: 0.005em;
+    padding: 50px 0;
+    margin: 0;
+    color: #818181;
+    line-height: 40px;
+}
+
+
+.skills{
+    background-color: #f8f9f9;
+    height: 100vh;
+}
+.skills .cont{
+    display: flex;
+    height: 100%;
+}
+.skills .container{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 0 140px;
+    background-color: #f8f9f9;
+    width: 50%;
+}
+.skills .back{
+    height: 100%;
+    width: 100%;
+    background: url('Images/macbook.jpg');
+    background-size: cover;
+    background-position: center;
+}
+.skills .container .skill{
+    display: flex;
+    flex-direction: column;
+}
+.skills .container .progressbar{
+    height: 5px;
+    width: 700px;
+    background: #d8d8d8;
+    overflow: hidden;
+}
+.skills .container .green{
+    background-color: #10c9c3;
+    height: 5px;
+}
+.skills .container h1{
+    font-size: 42px;
+    font-weight: 800;
+    margin: 0;
+}
+.skills .container p{
+    text-transform: uppercase;
+    font-size: 17px;
+    font-weight: 800;
+    padding: 60px 0 10px 0;
+}
+
+
+.infograph{
+    background: #10c9c3;
+}
+.infograph .container{
+    padding: 140px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.infograph .container .info{
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+.infograph .container .info img{
+    height: 60px;
+    width: 60px;
+    padding: 0 20px;
+    fill: white;
+}
+.infograph .container .info h1{
+    font-size: 25px;
+    color: white;
+    margin: 0;
+    padding: 0;
+}
+.infograph .container .info .text p{
+    font-size: 16px;
+    color: white;
+    text-transform: uppercase;
+    font-weight: 600;
+    margin: 0;
+    padding: 12px 0;
+}
+
+
+.portfolio{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    background: black;
+}
+.portfolio .container{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    height: 100%;
+    width: 100%;
+}
+.portfolio .container div{
+    width: 25%;
+    height: 0;
+    padding-top: 25%;
+    background-image: url('Images/macbook.jpg');
+    background-size: cover;
+    background-position: center;
+    position: relative;
+}
+.portfolio .container div .overlay{
+    opacity: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 75%;
+    z-index: 1;
+    background: rgba(0, 0, 0, 0.7);
+    transition: .5s ease;
+}
+.portfolio .container div a{
+    width: 15%;
+    height: 15%;
+    top: 43%;
+    left: 43%;
+    position: absolute;
+    z-index: 2;
+    display: none;
+}
+.portfolio .container div a img{
+    height: 100%;
+    width: 100%;
+}
+.portfolio button{
+    height: 140px;
+    background: #f5f5f5;
+    width: 100%;
+    text-transform: uppercase;
+    color: #818181;
+    font-weight: 600;
+    border: none;
+    font-size: 17px;
+}
+.portfolio button a{
+    text-decoration: none;
+    color: black;
+}
+
+.work-process{
+    width: 100%
+}
+.work-process .container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 140px;
+}
+.work-process h1{
+    font-size: 42px;
+    margin: 0;
+    margin-block-start: 0;
+    margin-block-end: 0;
+}
+.work-process p{
+    font-size: 22px;
+    margin: 0;
+    color: #818181;
+    text-align: center;
+    padding: 30px 0 40px 0;
+}
+.work-process .video{
+    position: relative;
+    width: 100%;
+    height: 0;
+    padding-bottom: 56.25%;
+}
+.work-process iframe{
+    position: absolute;
+    left: 0; top: 0;
+    width: 100%;
+    height: 100%;
+    border: 0;
+}
+
+.specs{
+    background: #f5f5f5;
+    width: 100%;
+}
+.specs .container{
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding: 120px 140px;
+    justify-content: space-between;
+}
+.specs .container .item{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    width: 25%;
+}
+.specs .container .item img{
+    padding: 0 0 25px;
+    transform: scale(1.5);
+}
+.specs h1{
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 17px;
+    font-weight: 800;
+    margin: 0;
+}
+.specs p{
+    color: #818181;
+    font-size: 20px;
+    word-break: break-word;
+    line-height: 34px;
+    letter-spacing: 0.005em;
+    text-align: center;
+    padding: 0 35px;
+}
+
+.quotes{
+    background: #10c9c3;
+    color: white;
+}
+.quotes .container{
+    padding: 160px 410px 90px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.quotes .container q{
+    font-weight: 800;
+    font-size: 34px;
+    text-align: center;
+    letter-spacing: 0.01em;
+    line-height: 50px;
+}
+.quotes .container p{
+    text-transform: uppercase;
+    font-size: 17px;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    padding: 30px 0 160px 0;
+}
+.quotes .container .buttons{
+    display: flex;
+    align-items: center;
+}
+.quotes .container .buttons button{
+    border-radius: 6px;
+    width: 8px;
+    height: 12px;
+    border: none;
+    margin: 0 10px;
+    background: #d8d8d8;
+    overflow: hidden;
+}
+.quotes .container .buttons button:hover{
+    border-radius: 10px;
+    width: 20px;
+    height: 20px;
+    background: white;
+    transition: 500ms;
+}
+
+.logos .container{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding: 70px 140px;
+}
+
+.input{
+    background: #f5f5f5;
+    display: flex;
+    justify-content: center;
+}
+.input .container{
+    width: 50%;
+    padding: 140px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.input .container h1{
+    font-size: 42px;
+    margin: 0;
+}
+.input .container p{
+    color: #818181;
+    font-size: 23px;
+    text-align: center;
+    padding: 30px 0 80px;
+    margin: 0;
+}
+.input .container .inputs{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0 70px;
+    justify-content: space-between;
+}
+.input .container .inputs input{
+    border: none;
+    height: 70px;
+    margin: 0 0 43px;
+    padding: 0 15px 0;
+    text-align: start;
+    word-break: break-word;
+}
+.input .container .inputs #name, #email{
+    width: 44%;
+}
+.input .container .inputs #title{
+    width: 100%;
+}
+.input .container .inputs #com{
+    width: 100%;
+    height: 240px;
+}
+.input .container button{
+    width: 250px;
+    height: 80px;
+    background: #10c9c3;
+    text-transform: uppercase;
+    border: none;
+    color: white;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    word-break: break-word;
+    outline: none;
+}
+
+.footer{
+    background: #141414;
+    display: flex;
+    align-items: center;
+}
+.footer .container{
+    width: 100%;
+    height: 100%;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    padding: 100px;
+    overflow: hidden;
+}
+.footer .container div{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+.footer a{
+    color: white;
+    text-decoration: none;
+    line-height: 33px;
+    font-size: 18px;
+}
+.footer .container .rights h1{
+    margin: 0;
+    font-size: 25px;
+    letter-spacing: 0.01em;
+    font-weight: 700;
+}
+.footer .container .rights p{
+    font-size: 18px;
+    line-height: 35px;
+    padding: 20px 0 0;
+    margin: 0;
+}
+.footer .container .links{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.footer .container .links .group{  
+    padding: 0 40px;
+}
+
+@media screen and (max-width: 1400px){
+    .skills{
+    background-color: #f8f9f9;
+    height: 200vh;
+    }
+    .skills .cont{
+        display: flex;
+        flex-direction: column-reverse;
+        height: 100%;
+    }
+    .skills .cont .container{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 0 0;
+        width: 100%;
+        height: 100vh;
+    }
+    .skills .cont .back{
+        height: 100vh;
+    }
+
+    .infograph .container{
+        padding: 140px 100px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    
+    .specs p{
+        color: #818181;
+        font-size: 15px;
+        word-break: break-word;
+        line-height: 25px;
+        letter-spacing: 0.005em;
+        text-align: center;
+        padding: 0 35px;
+    }
+
+    .quotes .container{
+        padding: 160px 200px 90px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .qotes .container p{
+        text-transform: uppercase;
+        font-size: 13px;
+        font-weight: 600;
+        letter-spacing: 0.1em;
+        padding: 30px 0 160px 0;
+    }
+
+    .logos .container{
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        padding: 70px 100px;
+    }
+}
+
+@media screen and (max-width: 1100px){
+    .top .navbar{
+        display: flex;
+        justify-content: space-between;
+        padding: 50px 80px;
+    }
+    .top .navbar .links a{
+        font-size: 13px;
+        font-weight: 800;
+        text-decoration: none;
+        color: black;
+        padding-left: 20px;
+        letter-spacing: 0.05em;
+    }
+
+    .portfolio .container div{
+        width: 50%;
+        height: 0;
+        padding-top: 50%;
+        background-image: url('Images/macbook.jpg');
+        background-size: cover;
+        background-position: center;
+        position: relative;
+    }
+    .portfolio .container div .overlay{
+        opacity: 0;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 50%;
+        z-index: 1;
+        background: rgba(0, 0, 0, 0.7);
+        transition: .5s ease;
+    }
+
+    .work-process .container{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 140px 100px;
+    }
+
+    .specs .container{
+        height: 100%;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        padding: 120px 90px;
+        justify-content: space-between;
+    }
+    .specs p{
+        color: #818181;
+        font-size: 22px;
+        word-break: break-word;
+        line-height: 34px;
+        letter-spacing: 0.005em;
+        text-align: center;
+        padding: 0 35px;
+    }
+
+    .input .container .inputs #name, #email, #title{
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 900px){
+    .top .info h1{
+        margin: 0;
+        padding: 0;
+        font-size: 45px;
+        letter-spacing: 0.01em;
+    }
+    .top .info p{
+        padding: 30px 0 40px 0;
+        word-break: break-word;
+        font-size: 20px;
+        font-weight: 400;
+        line-height: 35px;
+        margin: 0;
+        letter-spacing: 0.005em;
+        color: #818181;
+    }
+    
+    .specs .container{
+        height: 100%;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        padding: 100px 70px;
+        justify-content: space-between;
+    }
+
+    .infograph .container{
+        padding: 120px 80px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    
+    .logos .container{
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        padding: 70px;
+    }
+    .logos img{
+        transform: scale(0.7);
+    }
+}
+
+@media screen and (max-width: 800px){
+    .top .navbar .links a{
+        font-size: 11px;
+        font-weight: 800;
+        text-decoration: none;
+        color: black;
+        padding-left: 15px;
+        letter-spacing: 0.05em;
+    }
+    
+    .skills .container .progressbar{
+        height: 5px;
+        width: 500px;
+        background: #d8d8d8;
+        overflow: hidden;
+    }
+
+    .infograph .container{
+        padding: 120px 30px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .infograph .container .info img{
+        height: 50px;
+        width: 50px;
+        padding: 0 20px;
+        fill: white;
+    }
+    .infograph .container .info h1{
+        font-size: 20px;
+        color: white;
+        margin: 0;
+        padding: 0;
+    }
+    .infograph .container .info .text p{
+        font-size: 12px;
+        color: white;
+        text-transform: uppercase;
+        font-weight: 600;
+        margin: 0;
+        padding: 12px 0;
+    }
+
+    .work-process .container{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 100px 50px;
+    }
+
+    .specs .container{
+        height: 100%;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        padding: 100px 50px;
+        justify-content: space-between;
+    }
+    .specs h1{
+        text-align: center;
+        text-transform: uppercase;
+        font-size: 15px;
+        font-weight: 800;
+        margin: 0;
+    }
+    .specs p{
+        color: #818181;
+        font-size: 14px;
+        word-break: break-word;
+        line-height: 20px;
+        letter-spacing: 0.005em;
+        text-align: center;
+        padding: 0 35px;
+    }
+
+    .logos .container{
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        padding: 60px 40px;
+    }
+    .logos img{
+        transform: scale(0.6);
+    }
+}
+
+@media screen and (max-width: 750px){
+    .work-process p{
+        font-size: 17px;
+        margin: 0;
+        color: #818181;
+        text-align: center;
+        padding: 30px 0 40px 0;
+    }
+    
+    .logos .container{
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: nowrap;
+        padding: 60px 20px;
+    }
+    .logos img{
+        transform: scale(0.55);
+    }
+}
